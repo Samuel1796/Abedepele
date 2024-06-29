@@ -1,5 +1,5 @@
 import React from 'react';
-import Image1 from "../assets/Main Home Pge/12781055_5071716 1.png";
+import Image1 from "../../assets/Main Home Pge/12781055_5071716 1.png";
 
 const FAQ = () => {
   const faqData = [
@@ -26,7 +26,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-100 ">
+    <section className="py-12 bg-white">
       <div className="max-w-3xl mx-auto px-4">
         {/* FAQ Image */}
         <div className="mb-8 text-center">
@@ -39,14 +39,14 @@ const FAQ = () => {
           {faqData.map((item, index) => (
             <div key={index} className="relative">
               <div className="flex items-center mb-3 md:flex-row">
-                <div className="md:ml-4 flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white font-bold shadow z-10 mr-4">
+                <div className=" md:ml-4  flex items-center justify-center w-12 h-12  rounded-full bg-blue-500 text-white font-bold shadow z-10 px-2 ">
                   {index + 1}
                 </div>
                 <div className="text-slate-500">
-                  <h3 className="text-xl font-semibold text-blue-900">{item.question}</h3>
+                  <h3 className=" ml-6 text-xl font-semibold text-blue-900">{item.question}</h3>
                 </div>
               </div>
-              <div className="bg-white p-4 rounded border border-slate-200 text-slate-500 shadow ml-14 md:ml-0">
+              <div className="bg-white p-4 rounded border border-slate-200 text-gray-500 shadow ml-14 md:ml-0">
                 {item.answer}
               </div>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const VoteSteps = () => {
-  const [activeStep, setActiveStep] = useState();
+  const [activeStep, setActiveStep] = useState(null);
 
   const steps = [
     {
@@ -21,22 +21,22 @@ const VoteSteps = () => {
   return (
     <>
       <section className="border mt-[17em]  sm:mt-[3em] bg-[#09426c] h-auto">
-        <div className="grid gap-0 sm:grid-cols-2 lg:grid-cols-3  sm:mx-32">
+        <div className="grid gap-0 sm:grid-cols-1 lg:grid-cols-3">
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`p-8 sm:p-12 shadow-2xl shadow-gray-600/10 relative transition-all duration-500 ${
+              className={`p-8 sm:p-12 shadow-2xl shadow-gray-600/10 relative transition-all duration-500 cursor-pointer ${
                 activeStep === index
-                  ? "bg-[#d5ecf8]  border-[#0862a5] rounded-tl-3xl rounded-tr-3xl"
+                  ? "bg-[#d5ecf8] sm:bg-gradient-to-b sm:from-[#d5ecf8] sm:via-[#dcf3f8] sm:to-[#09426c] border-[#0862a5] sm:rounded-tl-3xl rounded-tr-3xl sm:h-[15rem] sm:top-[-5rem] top-0"
                   : index === 1
                   ? "bg-[#1165a4]"
                   : "bg-[#1c76ba]"
               }`}
               onClick={() => setActiveStep(index)}
-              style={{
-                height: activeStep === index ? "20rem" : "15rem",
-                top: activeStep === index ? "-5rem" : "0",
-              }}
+              // style={{
+              //   height: activeStep === index ? "15rem" : "15rem",
+              //   top: activeStep === index ? "-5rem" : "0",
+              // }}
             >
               <div className="space-y-4">
                 <h3

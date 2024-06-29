@@ -35,9 +35,9 @@
 
 // export default SVGBackground;
 import React from "react";
-import bgSVG from "../assets/svg.png";
+import bgSVG from "../../assets/svg.png";
 
-const SVGBackground = ({ menuState }) => {
+const SVGBackground = () => {
   return (
     <div className="absolute left-0 w-full translate-y-[0px] sm:translate-y-[-130px] z-10">
       <img src={bgSVG} alt="SVG" width={"100%"} />

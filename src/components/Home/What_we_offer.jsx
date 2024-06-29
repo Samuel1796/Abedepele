@@ -1,7 +1,7 @@
 import React from 'react';
-import Image1 from "../assets/Main Home Pge/Group 16.png";
-import Image2 from "../assets/Main Home Pge/Group 17.png";
-import Image3 from "../assets/Main Home Pge/Group 18.png";
+import Image1 from "../../assets/Main Home Pge/Group 16.png";
+import Image2 from "../../assets/Main Home Pge/Group 17.png";
+import Image3 from "../../assets/Main Home Pge/Group 18.png";
 
 const What_we_offer = () => {
   return (
@@ -12,7 +12,7 @@ const What_we_offer = () => {
             What We Offer
           </h1>
 
-          <p className="text-blue-800 text-center mb-12">
+          <p className="text-gray-500 text-center mb-12">
             Our platform ensures your vote is just a click away, whether you're in the library,
             dorm, or on the move. With real-time results and top-notch security, voting has
             never been this easy or reliable. Join us in revolutionizing school elections. Your
@@ -23,7 +23,7 @@ const What_we_offer = () => {
             <div className="text-center">
               <img src={Image1} alt="Live Vote Result" className="w-1/3 md:w-full h-auto mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-blue-900 mb-2">Live Vote result</h3>
-              <p className="text-blue-800">
+              <p className="text-gray-500">
                 Cast your vote and watch it count in real-time – where every vote is visible.
               </p>
             </div>
@@ -31,7 +31,7 @@ const What_we_offer = () => {
             <div className="text-center">
               <img src={Image2} alt="Secured Platform" className="w-1/3 md:w-full h-auto mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-blue-900 mb-2">Secured Platform</h3>
-              <p className="text-blue-800">
+              <p className="text-gray-500">
                 Vote with confidence on a platform where security meets simplicity.
               </p>
             </div>
@@ -39,7 +39,7 @@ const What_we_offer = () => {
             <div className="text-center">
               <img src={Image3} alt="Vote Online" className="w-1/3 md:w-full h-auto mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-blue-900 mb-2">Vote Online</h3>
-              <p className="text-blue-800">
+              <p className="text-gray-500">
                 Quick, secure, and user-friendly – we bring the ballot to you, wherever you are.
               </p>
             </div>

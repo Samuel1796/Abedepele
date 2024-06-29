@@ -1,6 +1,6 @@
 // Navbar.js
 import React, { useState } from "react";
-import logo from "../assets/Main Home Pge/UMaTL 1.png";
+import logo from "../../assets/Main Home Pge/UMaTL 1.png";
 import SVGBackground from "./SVGBackground"; // Import the SVGBackground component
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <section className="relative border">
-      <SVGBackground menuState={isMenuOpen} />{" "}
+      <SVGBackground />{" "}
       {/* Add the SVGBackground component */}
       <nav className="absolute top-0 left-0 w-full bg-transparent border-gray-200 z-10">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -28,7 +28,7 @@ const Navbar = () => {
             onClick={toggleMenu}
             data-collapse-toggle="navbar-default"
             type="button"
-            className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 ${
+            className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#1b9ce6] focus:outline-none focus:ring-2 focus:ring-blue-300 ${
               isMenuOpen ? "transform rotate-90" : ""
             } transition-transform duration-300`}
             aria-controls="navbar-default"
@@ -70,7 +70,7 @@ const Navbar = () => {
           </button>
           <div
             className={`${
-              isOpen ? "block bg-[#0693e3] mt-4 rounded-xl" : "hidden"
+              isOpen ? "block bg-[#1b9ce6] mt-4 rounded-xl" : "hidden"
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
@@ -78,7 +78,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white hover:bg-blue-600 rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:hover:border-b-2 md:hover:border-white transition-colors duration-300"
+                  className="block py-2 px-3 text-white hover:bg-[#70c2f2] rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:hover:border-b-2 md:hover:border-white transition-colors duration-300"
                   aria-current="page"
                 >
                   Home
@@ -88,7 +88,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white hover:bg-blue-600 rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:hover:border-b-2 md:hover:border-white transition-colors duration-300"
+                  className="block py-2 px-3 text-white hover:bg-[#70c2f2] rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:hover:border-b-2 md:hover:border-white transition-colors duration-300"
                 >
                   About
                 </a>

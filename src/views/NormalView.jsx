@@ -1,9 +1,10 @@
 import React from 'react';
-import Navbar from "../components/Navbar";
-import Hero from '../components/Hero';
-import VoteSteps from '../components/VoteSteps';
-import What_we_offer from '../components/What_we_offer';
-import FAQ from '../components/FAQ';
+import Navbar from "../components/Home/Navbar";
+import Hero from '../components/Home/Hero';
+import VoteSteps from '../components/Home/VoteSteps';
+import What_we_offer from '../components/Home/What_we_offer';
+import FAQ from '../components/Home/FAQ';
+import Footer from '../components/Home/Footer';
 
 const NormalView = () => {
     return (
@@ -19,6 +20,14 @@ const NormalView = () => {
             <VoteSteps/>
             <What_we_offer/>
             <FAQ/>
+                <div>
+                    <br /><br /><br /><br /><br />
+                    <div className="hidden sm:block">
+                        <br /><br /><br></br>                         <br /><br /><br></br>
+
+                    </div>
+                </div>
+            <Footer />
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import Image1 from "../assets/Main Home Pge/object.png";
-import Image2 from "../assets/Main Home Pge/Frame.png";
+import Image1 from "../../assets/Main Home Pge/object.png";
+import Image2 from "../../assets/Main Home Pge/Frame.png";
 
 const Hero = () => {
   return (
