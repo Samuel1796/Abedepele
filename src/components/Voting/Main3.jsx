@@ -1,32 +1,31 @@
 import React, { useState } from "react";
 import Image1 from "../../assets/Main Home Pge/object.png";
-import Image2 from "../../assets/Ongoing Registration Page/20824341_6368590 (1) 2.png";
+import Image2 from "../../assets/Ongoing Voter's Page/58597075_9436273 1.png";
 import { Link } from "react-router-dom";
 
 import Image3 from "../../assets/Main Home Pge/Group 16.png";
 import Image4 from "../../assets/Main Home Pge/Group 17.png";
 import Image5 from "../../assets/Main Home Pge/Group 18.png";
 
-const Main2 = () => {
+const Main3 = () => {
+  const [activeStep, setActiveStep] = useState(null);
 
-    const [activeStep, setActiveStep] = useState(null);
-
-    const steps = [
-      {
-        title: "ENROLL",
-        description: "Click on the Register Now above to go to the registration page.",
-      },
-      {
-        title: "DETAILS",
-        description: "Fill in the login form on the registration page to register your details with the portal.",
-      },
-      {
-        title: "SUBMIT",
-        description: "Click on the submit button to submit and voila you're done!",
-      },
-    ];
-    
-    
+  const steps = [
+    {
+      title: "START",
+      description: "Click on the Vote Now above to go to the voting page.",
+    },
+    {
+      title: "LOCATE",
+      description:
+        "Locate the delegate position and vote for your preferred Candidate.",
+    },
+    {
+      title: "CAST VOTE",
+      description:
+        "Click on the Vote button to vote for your carefully chosen candidate.!",
+    },
+  ];
 
   return (
     <>
@@ -65,23 +64,24 @@ const Main2 = () => {
                 Vote
               </a>
               <h2 className="text-[#074a7d] text-5xl font-extrabold mb-4">
-                Be The Change You Want To See!
+                Be heard: Vote for a change!!{" "}
               </h2>
               <p className="text-lg font-normal text-gray-500 mb-8">
-                In a world where technology bridges gaps and connects us all,
-                your vote is more <br></br>powerful than ever. With online
-                voting, you have the freedom to cast your ballot from <br></br>{" "}
-                the comfort of your homes, hostels, or while on the go. It's
-                secure, it's convenient,<br></br> and it's your right. Don't
-                miss the chance to be part of the change you wish to see.{" "}
-                <br></br>Every vote counts, every voice matters. Together, we
-                can shape a brighter future for our<br></br>
-                community and beyond. Participate, empower, and inspire.{" "}
-                <br></br>Vote online — for democracy, for progress, for us.
+                Your vote is more than just a mark on a ballot; it's a beacon Of
+                hope, a apple <br></br>
+                of change that reverberates through generations. As you step
+                into the voting<br></br> booth, remember that you're not onw
+                expressing your preference for a<br></br>candidate or an
+                issue—you're contributing to the collective tapestry of{" "}
+                <br></br>democracy. So, embrace your role as a voter with pride.
+                <br></br>
+                Together, we weave the fabric of democracy—one vote at a time.
+                Cast yours <br></br>today and be a thread in this intricate
+                tapestry of change.
               </p>
 
               <Link
-                to="/register"
+                to="/sign-in"
                 className="text-blue-600 hover:underline font-medium text-lg inline-flex items-center"
               >
                 {" "}
@@ -89,7 +89,7 @@ const Main2 = () => {
                   type="button"
                   className="text-white bg-gradient-to-r from-[#0f5991] via-[#1474bc] to-[#167fce] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-8 py-4 text-center me-2 mb-2"
                 >
-                  Register Now
+                  Vote Now
                 </button>
               </Link>
             </div>
@@ -138,11 +138,11 @@ const Main2 = () => {
 
         <div class="bg-sky-100 p-6 md:p-10 text-center">
           <h2 class="text-green-500 text-2xl md:text-3xl font-bold mb-4">
-          Registration portal now ACTIVE
-                    </h2>
+            Voting in Progress{" "}
+          </h2>
           <p class="text-blue-800 text-sm md:text-base max-w-2xl mx-auto">
-          Our platform is now available for every student to register. Please follow the steps above and we'll
-          let you know when voting is in section after registering.
+            The Platform is open and voting is already in session. Please follow
+            the above process to vote for your preferred candidate.
           </p>
         </div>
       </section>
@@ -213,4 +213,4 @@ const Main2 = () => {
   );
 };
 
-export default Main2;
+export default Main3;
