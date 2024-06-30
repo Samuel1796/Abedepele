@@ -1,6 +1,7 @@
 import React from "react";
 import Image1 from "../../assets/Main Home Pge/object.png";
 import Image2 from "../../assets/Main Home Pge/Frame.png";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -53,12 +54,10 @@ const Hero = () => {
                 community and beyond. Participate, empower, and inspire. <br></br>Vote
                 online — for democracy, for progress, for us.
               </p>
-              <a
-                href="#"
-                className="text-blue-600 hover:underline font-medium text-lg inline-flex items-center"
-              >
-                <button type="button" className="text-white bg-gradient-to-r from-[#0f5991] via-[#1474bc] to-[#167fce] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-8 py-4 text-center me-2 mb-2">Read About</button>
-              </a>
+              
+              <Link
+                  to="/about" className="text-blue-600 hover:underline font-medium text-lg inline-flex items-center"> <button type="button" className="text-white bg-gradient-to-r from-[#0f5991] via-[#1474bc] to-[#167fce] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-8 py-4 text-center me-2 mb-2">Read About</button>
+              </Link> 
             </div>
           </div>
         </div>

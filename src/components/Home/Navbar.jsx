@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import logo from "../../assets/Main Home Pge/UMaTL 1.png";
 import SVGBackground from "./SVGBackground"; // Import the SVGBackground component
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,31 +78,33 @@ const Navbar = () => {
           >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 space-y-4 sm:space-y-0 bg-transparent md:flex-row md:space-x-12 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="block py-2 px-3 text-white hover:bg-[#70c2f2] rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:hover:border-b-2 md:hover:border-white transition-colors duration-300"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <hr />
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
                   className="block py-2 px-3 text-white hover:bg-[#70c2f2] rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:hover:border-b-2 md:hover:border-white transition-colors duration-300"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <hr />
               <li>
+                <a href="#faq">
                 <button
                   type="button"
                   className="py-1 px-5 me-2 mb-2 text-sm font-medium text-white focus:outline-none bg-transparent rounded-full border border-white hover:bg-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 transition-colors duration-300"
                 >
                   FAQ
                 </button>
+                </a>
               </li>
               <hr />
               <li>

@@ -26,7 +26,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-white" id="faq">
       <div className="max-w-3xl mx-auto px-4">
         {/* FAQ Image */}
         <div className="mb-8 text-center">

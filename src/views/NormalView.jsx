@@ -5,6 +5,8 @@ import VoteSteps from '../components/Home/VoteSteps';
 import What_we_offer from '../components/Home/What_we_offer';
 import FAQ from '../components/Home/FAQ';
 import Footer from '../components/Home/Footer';
+import Main from '../components/Home/Main1';
+
 
 const NormalView = () => {
     return (
@@ -16,14 +18,18 @@ const NormalView = () => {
                         <br /><br />
                     </div>
                 </div>
-            <Hero />
+                <Main/>
+            {/* <Hero />
             <VoteSteps/>
-            <What_we_offer/>
+            <What_we_offer/> */}
             <FAQ/>
                 <div>
                     <br /><br /><br /><br /><br />
+                    <div className="block sm:hidden">
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    </div>
                     <div className="hidden sm:block">
-                        <br /><br /><br></br>                         <br /><br /><br></br>
+                        <br /><br /><br></br><br /><br /><br></br>
 
                     </div>
                 </div>

@@ -41,7 +41,7 @@ const SVGBackground = () => {
   return (
     <div className="absolute left-0 w-full translate-y-[0px] sm:translate-y-[-130px] z-10">
       <img src={bgSVG} alt="SVG" width={"100%"} />
-      <img src={bgSVG} alt="SVG" width={"100%"} className="translate-y-[-65px] opacity-80 sm:hidden" />
+      <img src={bgSVG} alt="SVG" width={"100%"} className="translate-y-[-65px] sm:translate-y-0 opacity-80 sm:hidden" />
     </div>
     // <svg
     //   width="100%"
