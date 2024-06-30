@@ -7,32 +7,58 @@ import Main3 from "../components/Voting/Main3";
 const Voting_H_Page = () => {
   return (
     <>
-<div className="relative flex flex-col min-h-screen">
-            <V_Navbar />
-                <div>
-                    <br /><br /><br /><br /><br />
-                    <div className="hidden sm:block">
-                        <br /><br />
-                    </div>
-                </div>
-                <Main3/>
-            {/* <Hero />
+      <div className="relative flex flex-col min-h-screen">
+        <V_Navbar />
+        <div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div className="hidden sm:block">
+            <br />
+            <br />
+          </div>
+        </div>
+        <Main3 />
+        {/* <Hero />
             <VoteSteps/>
             <What_we_offer/> */}
-            <FAQ/>
-                <div>
-                    <br /><br /><br /><br /><br />
-                    <div className="block sm:hidden">
-                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    </div>
-                    <div className="hidden sm:block">
-                        <br /><br /><br></br><br /><br /><br></br>
-
-                    </div>
-                </div>
-            <Footer />
+        <FAQ />
+        <div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div className="block sm:hidden">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+          <div className="hidden sm:block">
+            <br />
+            <br />
+            <br></br>
+            <br />
+            <br />
+            <br></br>
+          </div>
         </div>
-            </>
+        <Footer />
+      </div>
+    </>
   );
 };
 

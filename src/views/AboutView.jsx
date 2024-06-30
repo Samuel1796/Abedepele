@@ -67,7 +67,7 @@ const AboutView = () => {
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold text-[#074a7d] mb-4">Our Strenghts:</h2>
+          <h2 class="text-2xl font-bold text-[#074a7d] mb-4">Our Strengths:</h2>
           <ul class="space-y-4">
             <li>
               <h3 class="text-xl font-semibold text-[#074a7d]">

@@ -16,10 +16,13 @@ const candidates = [
   { name: 'Highest Yosh', position: 'PRO', year: 'Level 200', bio: 'Ghanaian-American poet, journalist, and civil rights activist, known professionally as Stokely Carmichael.' }
 ];
 
+const positions = ['President', 'Secretary', 'Financial Secretary', 'PRO'];
+
 const CandidatesView = () => {
   const [selectedCandidates, setSelectedCandidates] = useState({});
   const [selectedCandidate, setSelectedCandidate] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,9 +47,17 @@ const CandidatesView = () => {
   };
 
   const handleSubmit = () => {
-    console.log('Votes submitted:', selectedCandidates);
-    alert('Thanks for voting');
-    navigate('/'); // Redirect to the home page
+    setShowConfirmModal(true);
+  };
+
+  const handleConfirmSubmit = () => {
+    if (Object.keys(selectedCandidates).length === positions.length) {
+      console.log('Votes submitted:', selectedCandidates);
+      alert('Thanks for voting');
+      navigate('/'); // Redirect to the home page
+    } else {
+      alert('Please select a candidate for each position.');
+    }
   };
 
   const handleDismiss = () => {
@@ -151,41 +162,91 @@ const CandidatesView = () => {
             <div className="relative bg-white rounded-lg shadow">
               <button
                 type="button"
-                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center"
-                data-modal-hide="popup-modal"
+                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
                 onClick={handleDismiss}
               >
                 <svg
-                  className="w-3 h-3"
                   aria-hidden="true"
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 14"
                 >
                   <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                  />
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
                 </svg>
                 <span className="sr-only">Close modal</span>
               </button>
-              <div className="p-4 md:p-5 text-center">
-                <div className="w-24 h-24 mb-3 rounded-full bg-gray-300 flex items-center justify-center mx-auto">
-                  <span className="text-4xl text-gray-600">{selectedCandidate.name[0]}</span>
-                </div>
-                <h5 className="mb-1 text-xl font-medium text-gray-900">{selectedCandidate.name}</h5>
-                <span className="text-sm text-gray-500">{selectedCandidate.year}</span>
-                <p className="mt-2 text-gray-700">{selectedCandidate.bio}</p>
+              <div className="p-6 text-center">
+                <h3 className="mb-5 text-lg font-normal text-gray-500">Candidate Profile</h3>
+                <p className="mb-2 text-xl font-bold text-gray-900">{selectedCandidate.name}</p>
+                <p className="mb-2 text-sm text-gray-500">{selectedCandidate.position}</p>
+                <p className="mb-2 text-sm text-gray-500">{selectedCandidate.year}</p>
+                <p className="mb-4 text-sm text-gray-500">{selectedCandidate.bio}</p>
                 <button
-                  data-modal-hide="popup-modal"
                   type="button"
-                  className="mt-4 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+                  className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                   onClick={handleDismiss}
                 >
-                  Dismiss
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showConfirmModal && (
+        <div
+          id="popup-modal"
+          tabIndex="-1"
+          className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
+        >
+          <div className="relative p-4 w-full max-w-md">
+            <div className="relative bg-white rounded-lg shadow">
+              <button
+                type="button"
+                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                onClick={() => setShowConfirmModal(false)}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+                <span className="sr-only">Close modal</span>
+              </button>
+              <div className="p-6 text-center">
+                <h3 className="mb-5 text-lg font-normal text-gray-500">Confirm Your Votes</h3>
+                {positions.map((position) => (
+                  <div key={position} className='text-black'>
+                    <strong >{position}:</strong> {selectedCandidates[position] || 'No selection made'}
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  className="mt-4 text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                  onClick={handleConfirmSubmit}
+                >
+                  Confirm
+                </button>
+                <button
+                  type="button"
+                  className="mt-4 ml-2 text-gray-700 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                  onClick={() => setShowConfirmModal(false)}
+                >
+                  Cancel
                 </button>
               </div>
             </div>

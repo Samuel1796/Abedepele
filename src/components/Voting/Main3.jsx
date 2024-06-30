@@ -8,7 +8,7 @@ import Image4 from "../../assets/Main Home Pge/Group 17.png";
 import Image5 from "../../assets/Main Home Pge/Group 18.png";
 
 const Main3 = () => {
-  const [activeStep, setActiveStep] = useState(null);
+  const [activeStep, setActiveStep] = useState();
 
   const steps = [
     {
