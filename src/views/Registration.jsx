@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Home/Navbar";
 import Footer from "../components/Home/Footer";
-import image1 from "../assets/green-thumbs-up.png";
 
 const Registration = () => {
   const [showModal, setShowModal] = useState(false);
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+    setError("");
     setShowModal(true);
   };
 
@@ -137,6 +144,8 @@ const Registration = () => {
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                   <label
                     htmlFor="floating_password"
@@ -154,6 +163,8 @@ const Registration = () => {
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                   <label
                     htmlFor="floating_confirm_password"
@@ -163,6 +174,8 @@ const Registration = () => {
                   </label>
                 </div>
               </div>
+
+              {error && <p className="text-red-500 text-sm">{error}</p>}
 
               <button
                 type="submit"
