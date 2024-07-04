@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import backgroundImage from '../assets/Background Image/49681450_9307751 1.png';
 import { useNavigate } from 'react-router-dom';
 
+// Updated candidates array with the image URL
 const candidates = [
-  { name: 'Kwame Nkrumah', position: 'President', year: 'Level 200', bio: 'First President of Ghana and a prominent Pan-Africanist.' },
-  { name: 'Yaa Asantewaa', position: 'President', year: 'Level 100', bio: 'Queen mother of Ejisu who led the Ashanti rebellion against British colonialism.' },
-  { name: 'Kofi Annan', position: 'President', year: 'Level 400', bio: 'Former Secretary-General of the United Nations and Nobel Peace Prize laureate.' },
-  { name: 'Efua Sutherland', position: 'Secretary', year: 'Level 200', bio: 'Ghanaian playwright, director, and dramatist.' },
-  { name: 'Abedi Pele', position: 'Financial Secretary', year: 'Level 100', bio: 'Ghanaian footballer, considered one of the greatest African players of all time.' },
-  { name: 'Ama Ata Aidoo', position: 'Financial Secretary', year: 'Level 400', bio: 'Ghanaian author, poet, playwright, and academic.' },
-  { name: 'Samia Nkrumah', position: 'PRO', year: 'Level 300', bio: 'Ghanaian politician and daughter of Kwame Nkrumah.' },
-  { name: 'J.E.A. Mills', position: 'President', year: 'Level 200', bio: 'Former President of Ghana, known for his anti-corruption campaign.' },
-  { name: 'Asamoah Gyan', position: 'Financial Secretary', year: 'Level 100', bio: 'Ghanaian footballer, who played as a striker for several clubs in Europe and Asia.' },
-  { name: 'Kwame Ture', position: 'Secretary', year: 'Level 200', bio: 'Ghanaian-American poet, journalist, and civil rights activist, known professionally as Stokely Carmichael.' },
-  { name: 'Highest Yosh', position: 'PRO', year: 'Level 200', bio: 'Ghanaian-American poet, journalist, and civil rights activist, known professionally as Stokely Carmichael.' }
+  { name: 'Kwame Nkrumah', position: 'President', year: 'Level 200', bio: 'First President of Ghana and a prominent Pan-Africanist.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Yaa Asantewaa', position: 'President', year: 'Level 100', bio: 'Queen mother of Ejisu who led the Ashanti rebellion against British colonialism.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Kofi Annan', position: 'President', year: 'Level 400', bio: 'Former Secretary-General of the United Nations and Nobel Peace Prize laureate.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Efua Sutherland', position: 'Secretary', year: 'Level 200', bio: 'Ghanaian playwright, director, and dramatist.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Abedi Pele', position: 'Financial Secretary', year: 'Level 100', bio: 'Ghanaian footballer, considered one of the greatest African players of all time.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Ama Ata Aidoo', position: 'Financial Secretary', year: 'Level 400', bio: 'Ghanaian author, poet, playwright, and academic.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Samia Nkrumah', position: 'PRO', year: 'Level 300', bio: 'Ghanaian politician and daughter of Kwame Nkrumah.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'J.E.A. Mills', position: 'President', year: 'Level 200', bio: 'Former President of Ghana, known for his anti-corruption campaign.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Asamoah Gyan', position: 'Financial Secretary', year: 'Level 100', bio: 'Ghanaian footballer, who played as a striker for several clubs in Europe and Asia.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Kwame Ture', position: 'Secretary', year: 'Level 200', bio: 'Ghanaian-American poet, journalist, and civil rights activist, known professionally as Stokely Carmichael.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' },
+  { name: 'Highest Yosh', position: 'PRO', year: 'Level 200', bio: 'Ghanaian-American poet, journalist, and civil rights activist, known professionally as Stokely Carmichael.', image: 'https://c4.wallpaperflare.com/wallpaper/281/461/210/tattoo-snakes-tattoo-muscle-wallpaper-thumb.jpg' }
 ];
 
 const positions = ['President', 'Secretary', 'Financial Secretary', 'PRO'];
@@ -66,7 +67,6 @@ const CandidatesView = () => {
       }
     });
   };
-  
 
   const handleSubmit = () => {
     setShowConfirmModal(true);
@@ -90,7 +90,7 @@ const CandidatesView = () => {
   const renderSkeleton = () => (
     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-2">
       <div className="animate-pulse flex flex-col items-center pb-10 pt-5">
-        <div className="w-24 h-24 mb-3 rounded-full bg-gray-300"></div>
+        <div className="w-32 h-32 mb-3 rounded-full bg-gray-300"></div>
         <div className="h-6 bg-gray-300 rounded w-32 mb-2"></div>
         <div className="h-4 bg-gray-300 rounded w-20 mb-4"></div>
         <div className="flex mt-4 md:mt-6 space-x-2">
@@ -107,8 +107,8 @@ const CandidatesView = () => {
       .map(candidate => (
         <div key={candidate.name} className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-2">
           <div className="flex flex-col items-center pb-10 pt-5">
-            <div className="w-24 h-24 mb-3 rounded-full bg-gray-300 flex items-center justify-center">
-              <span className="text-4xl text-gray-600">{candidate.name[0]}</span>
+            <div className="w-32 h-32 mb-3 rounded-full bg-gray-300 flex items-center justify-center">
+              <img src={candidate.image} alt={candidate.name} className="w-full h-full object-cover rounded-full" />
             </div>
             <h5 className="mb-1 text-xl font-medium text-gray-900">{candidate.name}</h5>
             <span className="text-sm text-gray-500">{candidate.year}</span>
@@ -131,7 +131,7 @@ const CandidatesView = () => {
         </div>
       ));
   };
-
+  
   return (
     <div className="container mx-auto p-4 min-h-screen" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover' }}>
       {showSuccessMessage ? (
