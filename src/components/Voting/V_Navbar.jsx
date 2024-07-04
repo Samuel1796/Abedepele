@@ -98,7 +98,7 @@ const V_Navbar = () => {
               <hr />
               <li>
                 <Link
-                  to="#"
+                  to="/live-vote-count"
                   className="block py-2 px-3 text-white hover:bg-[#70c2f2] rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:hover:border-b-2 md:hover:border-white transition-colors duration-300"
                 >
                   Live Voting Count

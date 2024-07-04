@@ -264,6 +264,10 @@ const Registration = () => {
             <br />
             <br />
             <br></br>
+            <br></br>
+
+            <br></br>
+
             <br />
             <br />
             <br></br>
