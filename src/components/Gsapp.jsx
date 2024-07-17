@@ -87,7 +87,7 @@ const Gsapp = () => {
                     layout
                     className={isHidden ? isHiddenStyle : isVisibleStyle}>
 
-                    <div className='mt-20 flex flex-col gap-2 justify-center font-bold text-3xl lg:text-5xl'>
+                    <div className='mt-20 flex flex-col gap-2 justify-center font-bold text-3xl lg:text-5xl z-50'>
                         {
                             navs.map((nav, index) => (
                                 <div key={index + 1}>
