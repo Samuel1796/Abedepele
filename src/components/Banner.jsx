@@ -1,7 +1,9 @@
 import React from 'react';
 import mainimage from '../assets/1.jpg';
-
+import { useState } from 'react';
 const Banner = () => {
+
+  
   return (
     <section className="bg-green-50 text-white py-16 px-4 sm:px-6 lg:px-8 overflow-hidden relative ">
       <div className="max-w-7xl mx-auto">
@@ -9,13 +11,10 @@ const Banner = () => {
           {/* Left side text content */}
           <div className="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0 px-6">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight text-green-800">
-              Make financial<br />service accessible
+              Make Waste Recycling<br />service accessible
             </h1>
             <p className="text-lg sm:text-xl text-green-700">
-              We've designed an app that complements<br />
-              your unique lifestyle, simplifying cashless<br />
-              payments and unlocking accessible<br />
-              financial services for all.
+            According to recent data, the annual waste volume in the region escalated from 81 million tonnes to 174 million tonnes between 2012 and 2016, with projections pointing to a jaw-dropping 269 million tonnes by 2030. Our mission? To delve deep into the heart of off-grid urban areas in Ghana, unearthing the intricate nuances of unmanaged waste.
             </p>
           </div>
 

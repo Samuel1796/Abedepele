@@ -5,6 +5,8 @@ import NotFound from "./views/NotFound";
 import HomePage from "./views/HomePage";
 import SignUp from "./views/SignUp";
 import LoginPage from "./views/LoginPage";
+import UserPage from "./views/UserPage"
+import AgentPage from "./views/AgentPage";
 
 function App() {
   
@@ -17,6 +19,8 @@ function App() {
         />
         <Route path="/signup" element= {<SignUp/>} />
         <Route path="/login" element= {<LoginPage/>} />
+        <Route path = "/userpage" element= {<UserPage/>}/>
+        <Route path = "/agentpage" element = {<AgentPage/>}/>
 
        
         <Route path="*" element={<NotFound/>} />
