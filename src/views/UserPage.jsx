@@ -43,7 +43,7 @@ const UserPage = () => {
   const [history, setHistory] = useState([]);
 
   // Static agent location
-  const agentLocation = { latitude: 5.6037, longitude: -0.187 }; // Example coordinates for Accra, Ghana
+  const agentLocation = { latitude: 4.9472, longitude: -1.7137 }; // Example coordinates for Accra, Ghana
 
   useEffect(() => {
     // Retrieve user location from localStorage
@@ -378,7 +378,7 @@ const UserPage = () => {
             </h2>
             <MapSection />
             <p className="mt-4 text-gray-600">
-              Agent Address: 123 Example Street, Accra, Ghana
+              Agent Address: 123 Example Street, Essikado, Ghana
             </p>
           </section>
 
