@@ -21,9 +21,11 @@ const LoginPage = () => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          setLocation({ latitude, longitude });
-          // Here you can also send the location to your backend or store it in local storage
-          console.log("Location acquired:", { latitude, longitude });
+          const location = { latitude, longitude };
+          setLocation(location);
+          // Store the location in localStorage
+          localStorage.setItem('userLocation', JSON.stringify(location));
+          console.log("Location acquired:", location);
         },
         (error) => {
           console.error("Error getting location:", error.message);
