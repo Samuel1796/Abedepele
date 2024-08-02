@@ -13,7 +13,7 @@ const Hero = () => {
             Recycling That Fits Your Life
           </h1>
           <p className="text-lg sm:text-xl text-center text-green-700 mb-8 max-w-3xl mx-auto">
-            Effortlessly manage your waste, contribute to a cleaner environment, and take control of your recycling habits - all with EcoSafe
+            Effortlessly manage your waste, contribute to a cleaner environment, and take control of your recycling habits - all with EcoSave
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
             <Link to="/signup">

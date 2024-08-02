@@ -113,7 +113,7 @@ const LoginPage = () => {
                 Sign in
               </button>
               <p className="text-sm font-light text-gray-500">
-                Don't have an account yet? <Link to="/agentpage" className="font-medium text-primary-600 hover:underline">An Agent</Link>
+              Are You An Agent? <Link to="/agentpage" className="font-medium text-primary-600 hover:underline">Sign in as An Agent</Link>
               </p>
             </form>
           </div>
